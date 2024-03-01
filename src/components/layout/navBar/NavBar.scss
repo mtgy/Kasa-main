@@ -1,0 +1,20 @@
+nav {
+    margin-top: 10px;
+    justify-content: flex-end; 
+
+  }
+
+nav a {
+    text-transform: uppercase;
+    margin-right: 1rem;
+
+    @media only screen and (min-width: 450px) {
+    margin-right: 2rem;
+    }
+  
+    @media only screen and (min-width: 768px) {
+      text-transform: none; 
+      font-size: 24px;
+      margin-right: 5rem;
+    }
+  }

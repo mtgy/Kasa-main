@@ -1,0 +1,36 @@
+@import '/src/assets/styles/Colors.scss';
+
+header {
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments à l'extrémité des deux côtés */
+    align-items: center;
+    
+    max-width: 1280px;
+    width: 100%;
+
+      @media only screen and (min-width: 768px) {
+        padding:2.8rem 0.5rem 3.1rem 0.5rem;
+      }
+    
+      @media only screen and (min-width: 1280px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+     
+       .logo {
+        margin: 1.3rem;
+      }
+       
+
+.logo * {
+
+    max-width: 145px;
+    height: auto;
+    fill: $primary-color;
+    @media only screen and (min-width: 768px) {
+        max-width: 211px;
+      }
+  }
+  
+}
