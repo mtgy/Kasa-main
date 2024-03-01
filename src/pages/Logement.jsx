@@ -10,7 +10,7 @@ const Logement = () => {
     const { id } = useParams(); 
   
     
-    console.log('Id récupéré :', id); // Récupérer l'ID depuis l'URL
+    console.log('Id récupéré :', id); 
 
 
     
@@ -18,7 +18,7 @@ const Logement = () => {
 
   useEffect(() => {
     const foundLogement = DataLogements.find(logement => logement.id === id);
-    console.log(foundLogement); // Ajoutez ceci pour voir si le logement est trouvé
+    console.log(foundLogement); 
     if (foundLogement) {
       setLogement(foundLogement);
     }
