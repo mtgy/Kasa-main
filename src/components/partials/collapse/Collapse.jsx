@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Fade from './Fade';
 import './collapse.scss';
 
 function Collapse({ CollapseTitle, CollapseContent }) {
@@ -18,9 +17,8 @@ function Collapse({ CollapseTitle, CollapseContent }) {
         <FontAwesomeIcon icon={open ? faChevronDown : faChevronUp} />
       </button>
 
-      <Fade visible={open}>
-      <p>{CollapseContent}</p>
-      </Fade>
+      
+      <p className={open ? "open" : ""}>{CollapseContent}</p>
     </div>
   );
 }
