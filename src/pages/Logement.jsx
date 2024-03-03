@@ -6,7 +6,8 @@ import Footer from "@layout/footer/Footer";
 import DataLogements from '@data/logements.json';
 import Carousel from '@partials/carousel/Carousel';
 import Tag from '@partials/tag/Tag';
-import Rating from '@partials/rating/Rating'
+import Rating from '@partials/rating/Rating';
+import Host from '@partials/host/Host';
 import './logement.scss';
 
 const Logement = () => {
@@ -35,6 +36,7 @@ const Logement = () => {
               </div>
               <Tag data={logement.tags} />
               <Rating data={logement.rating} />
+              <Host data={logement.host}/>
               {/* Affichez d'autres détails du logement ici */}
             </div>
           ) : (
