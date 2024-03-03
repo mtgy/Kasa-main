@@ -18,6 +18,22 @@ export default defineConfig({
       {
         find: '@partials',
         replacement: path.resolve(__dirname, 'src/components/partials')
+      },
+      {
+        find: '@routes',
+        replacement: path.resolve(__dirname, 'src/components/routes')
+      },
+      {
+        find: '@data',
+        replacement: path.resolve(__dirname, 'src/data')
+      },
+      {
+        find: '@pages',
+        replacement: path.resolve(__dirname, 'src/pages')
+      },
+      {
+        find: '@styles',
+        replacement: path.resolve(__dirname, 'src/assets/styles')
       }
 
 

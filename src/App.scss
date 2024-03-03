@@ -26,14 +26,36 @@ body {
   flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-  color: $secondary-color;
+h2 {
 
-  &:hover {
-    text-decoration: underline;
-  }
+  color: $primary-color;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; 
+
   
+  @media only screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+   @media only screen and (min-width: 1280px) {
+    font-size: 36px;
+
+   }
+
+}
+
+
+h3 {
+
+font-size: 14px;
+font-weight: 500;
+
+@media only screen and (min-width: 768px) {
+  font-size: 18px;
+}
+
 }
 
 p {
@@ -44,6 +66,18 @@ p {
     font-size: 18px ;
   }
 }
+
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  
+}
+
 
 main {
   max-width: 1280px;
@@ -72,16 +106,12 @@ button {
   
   }
 
+          h2 {
+            margin: 10vh 0;
+          }
 
-      h1, h2 {
-        color: $primary-color;
-
-
-        @media only screen and (min-width: 768px) {
-          
-        }
-      }
         h1{
+          color: $primary-color;
 
            font-size: 26vw;
            margin: 5vh 0;
@@ -95,24 +125,7 @@ button {
            }
 
         }
-        h2 {
-
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 142.6%; 
-          margin: 10vh 0;
-          
-          @media only screen and (min-width: 768px) {
-            font-size: 24px;
-          }
-           @media only screen and (min-width: 1280px) {
-            font-size: 36px;
-  
-           }
-
-
-        }
+       
 
         a {
           margin: 10vh 0;

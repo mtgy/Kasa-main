@@ -1,0 +1,17 @@
+@import '../assets/styles/Colors.scss' ;
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr; // Deux colonnes égales
+    gap: 20px; // Espacement entre les éléments
+    margin: auto 2em;
+
+  }
+
+  .title {
+    grid-column: span 2;
+  }
+
+  
+  

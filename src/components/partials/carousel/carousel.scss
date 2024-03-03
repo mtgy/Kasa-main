@@ -1,18 +1,23 @@
 @import '/src/assets/styles/Colors.scss';
 
 .carousel {
-  margin: auto;
   position: relative;
-  width: 100%;
-  max-width: 340px;
   border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 4/3;
+  grid-column: span 2;
 
   @media screen and (min-width: 768px) {
+    aspect-ratio: 3/1;
+  }
+
+
+  @media screen and (min-width: 1240px) {
     border-radius: 25px;
     max-width: 1240px;
+    width: 100%;
     height: 415px; 
+    margin: auto;
   }
 
   .slides {
@@ -52,8 +57,15 @@
     cursor: pointer;
     z-index: 2;
 
+
+
+ 
+
     * {
       color: $accent-color;
+      @media screen and (min-width: 768px) {
+        height: 3em;
+      }
     }
   }
 

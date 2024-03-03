@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Cards.scss'; 
 
 const Card = ({ id, title, cover }) => {
-  const link = `/logement/${id}`; // Remplacez "votre-chemin" par le chemin réel que vous souhaitez
+  const link = `/logement/${id}`; 
 
   return (
     <Link to={link} className="card">
