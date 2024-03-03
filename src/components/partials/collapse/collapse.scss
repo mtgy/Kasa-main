@@ -48,7 +48,7 @@
   p {
     text-align: justify;
     border-radius: 5px;
-    background: var(--Gray, rgba(246, 246, 246, 0.45));
+    background: rgba($secondary-color, 0.04);
     margin: 0;
     padding: 10px; 
     opacity: 0;

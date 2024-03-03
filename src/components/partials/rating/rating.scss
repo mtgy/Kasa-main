@@ -1,0 +1,9 @@
+@import '/src/assets/styles/Colors.scss';
+
+.fa-star {
+    color: rgba($secondary-color, 0.11);
+
+    &.selected {
+        color: $primary-color;
+    }
+}

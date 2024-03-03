@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from "@layout/header/Header";
 import Footer from "@layout/footer/Footer";
-import DataLogements from '@/data/logements.json';
-import Carousel from '../components/partials/carousel/Carousel';
-import Tag from '../components/partials/tag/Tag';
+import DataLogements from '@data/logements.json';
+import Carousel from '@partials/carousel/Carousel';
+import Tag from '@partials/tag/Tag';
+import Rating from '@partials/rating/Rating'
 import './logement.scss';
 
 const Logement = () => {
@@ -33,6 +34,7 @@ const Logement = () => {
                 <h3>{logement.location}</h3>
               </div>
               <Tag data={logement.tags} />
+              <Rating data={logement.rating} />
               {/* Affichez d'autres détails du logement ici */}
             </div>
           ) : (
