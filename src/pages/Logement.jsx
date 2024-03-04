@@ -8,6 +8,7 @@ import Carousel from '@partials/carousel/Carousel';
 import Tag from '@partials/tag/Tag';
 import Rating from '@partials/rating/Rating';
 import Host from '@partials/host/Host';
+import Collapse from '@partials/collapse/Collapse'
 import './logement.scss';
 
 const Logement = () => {
@@ -37,6 +38,16 @@ const Logement = () => {
               <Tag data={logement.tags} />
               <Rating data={logement.rating} />
               <Host data={logement.host}/>
+              <Collapse
+           
+            CollapseTitle='Description'
+            CollapseContent={logement.description}
+          />
+          <Collapse
+           
+           CollapseTitle='Equipments'
+           CollapseContent={logement.equipments}
+         />
               {/* Affichez d'autres détails du logement ici */}
             </div>
           ) : (

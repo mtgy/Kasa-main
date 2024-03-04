@@ -6,7 +6,7 @@ import './rating.scss';
 
 const Rating = ({ data }) => {
   return (
-    <div>
+    <div className='rating'>
       {[1, 2, 3, 4, 5].map((star) => (
         <FontAwesomeIcon
           key={star}

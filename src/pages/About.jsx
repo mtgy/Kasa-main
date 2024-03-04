@@ -12,6 +12,7 @@ const About = () => {
       <Header />
       <main>
         <Banner imageUrl={BannerImg} />
+        <div className='section'>
         {DataAbout.map((item, index) => (
           <Collapse
             key={index}
@@ -19,6 +20,7 @@ const About = () => {
             CollapseContent={item.content}
           />
         ))}
+        </div>
       </main>
       <Footer />
     </>
