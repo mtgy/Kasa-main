@@ -1,21 +1,19 @@
 @import '/src/assets/styles/Colors.scss';
 
+.tag {
+  white-space: nowrap;
+  background-color: $primary-color;
+  color: $accent-color;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem; // Ajoutez cette ligne pour ajouter un espace vertical entre les tags
+  padding: 0.5rem 0.8rem;
 
-
-    .tag {
-        white-space: nowrap;
-        background-color: $primary-color;
-        color: $accent-color;
-        text-align: center;
-        font-size: 10px;
-        font-weight: 700; 
-        border-radius: 10px;
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem; // Ajoutez cette ligne pour ajouter un espace vertical entre les tags
-        padding: 0.5rem 0.8rem;
-
-        @media only screen and (min-width: 768px) {
-            font-size: 14px;
-            padding: 0.25rem 2rem;
-        }
-    }
+  @media only screen and (min-width: 768px) {
+    font-size: 14px;
+    padding: 0.25rem 2rem;
+  }
+}

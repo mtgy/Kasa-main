@@ -1,15 +1,13 @@
 @import '/src/assets/styles/Colors.scss';
 
 .fa-star {
-    color: rgba($secondary-color, 0.11);
+  color: rgba($secondary-color, 0.11);
 
-    @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
+    height: 1.5em;
+  }
 
-        height: 1.5em;
-        
-    }
-
-    &.selected {
-        color: $primary-color;
-    }
+  &.selected {
+    color: $primary-color;
+  }
 }

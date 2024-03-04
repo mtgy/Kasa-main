@@ -1,6 +1,6 @@
 import './App.scss'
 import DataLogements from '@/data/logements.json'
-import AppRouter from './components/routes/AppRouter'
+import AppRouter from '@routes/AppRouter'
 import Home from '@/pages/Home'
 
 

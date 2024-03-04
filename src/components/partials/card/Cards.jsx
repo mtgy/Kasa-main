@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Cards.scss'; 
+import './Cards.scss';
 
 const Card = ({ id, title, cover }) => {
-  const link = `/logement/${id}`; 
+  const link = `/logement/${id}`;
 
   return (
     <Link to={link} className="card">
@@ -12,7 +12,7 @@ const Card = ({ id, title, cover }) => {
     </Link>
   );
 };
-  
+
 const Cards = ({ data }) => {
   return (
     <div className="cardList">

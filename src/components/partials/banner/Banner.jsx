@@ -6,7 +6,7 @@ const Banner = ({ textBanner, imageUrl }) => {
 
   useEffect(() => {
     if (h1Ref.current && textBanner) {
-      // Met à jour le texte du H1 avec le texte formaté
+
       h1Ref.current.textContent = textBanner.split(', ').join(',\n');
     }
   }, [textBanner]);
