@@ -2,7 +2,7 @@ import React from 'react';
 import './host.scss';
 
 function Host({ data }) {
-    console.log(data);
+
   const { name, picture } = data;
 
   return (

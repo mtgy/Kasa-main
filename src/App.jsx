@@ -7,7 +7,7 @@ import Home from '@/pages/Home'
 
 
 function App() {
-  console.log (DataLogements);
+
   return (
     
     <>

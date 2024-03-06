@@ -17,7 +17,7 @@ const Logement = () => {
 
   useEffect(() => {
     const foundLogement = DataLogements.find(logement => logement.id === id);
-    console.log(foundLogement);
+  
     if (foundLogement) {
       setLogement(foundLogement);
     }
