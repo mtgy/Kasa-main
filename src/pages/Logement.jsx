@@ -48,7 +48,7 @@ const Logement = () => {
            CollapseTitle='Equipments'
            CollapseContent={logement.equipments}
          />
-              {/* Affichez d'autres détails du logement ici */}
+             
             </div>
           ) : (
             <div>{id}</div>
