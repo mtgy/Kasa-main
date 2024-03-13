@@ -1,4 +1,3 @@
-// Logement.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from "@layout/header/Header";
@@ -8,7 +7,7 @@ import Carousel from '@partials/carousel/Carousel';
 import Tag from '@partials/tag/Tag';
 import Rating from '@partials/rating/Rating';
 import Host from '@partials/host/Host';
-import Collapse from '@partials/collapse/Collapse'
+import Collapse from '@partials/collapse/Collapse';
 import './logement.scss';
 
 const Logement = () => {
@@ -17,7 +16,7 @@ const Logement = () => {
 
   useEffect(() => {
     const foundLogement = DataLogements.find(logement => logement.id === id);
-  
+
     if (foundLogement) {
       setLogement(foundLogement);
     }
@@ -35,20 +34,22 @@ const Logement = () => {
                 <h2>{logement.title}</h2>
                 <h3>{logement.location}</h3>
               </div>
-              <Tag data={logement.tags} />
+
+              <div className='tags'>
+                {logement.tags.map((tag, index) => (
+                  <div key={index} className='tag'>{tag}</div>
+                ))}
+              </div>
               <Rating data={logement.rating} />
               <Host data={logement.host}/>
               <Collapse
-           
-            CollapseTitle='Description'
-            CollapseContent={logement.description}
-          />
-          <Collapse
-           
-           CollapseTitle='Equipments'
-           CollapseContent={logement.equipments}
-         />
-             
+                CollapseTitle='Description'
+                CollapseContent={logement.description}
+              />
+              <Collapse
+                CollapseTitle='Equipments'
+                CollapseContent={logement.equipments}
+              />
             </div>
           ) : (
             <div>{id}</div>
