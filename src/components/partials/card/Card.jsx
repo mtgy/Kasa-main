@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Cards.scss';
+import './Card.scss';
 
 const Card = ({ id, title, cover }) => {
   const link = `/logement/${id}`;
@@ -13,14 +13,6 @@ const Card = ({ id, title, cover }) => {
   );
 };
 
-const Cards = ({ data }) => {
-  return (
-    <div className="cardList">
-      {data.map((item) => (
-        <Card key={item.id} id={item.id} title={item.title} cover={item.cover} />
-      ))}
-    </div>
-  );
-};
 
-export default Cards;
+
+export default Card;
