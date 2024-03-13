@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Header from "@layout/header/Header";
 import Footer from "@layout/footer/Footer";
 import DataLogements from '@data/logements.json';
@@ -13,14 +13,24 @@ import './logement.scss';
 const Logement = () => {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  const [shouldRedirect, setShouldRedirect] = useState(false);
 
   useEffect(() => {
     const foundLogement = DataLogements.find(logement => logement.id === id);
 
     if (foundLogement) {
       setLogement(foundLogement);
+    } else {
+      setLogement(null);
+      setShouldRedirect(true);
     }
   }, [id]);
+
+
+  if (shouldRedirect) {
+    return <Navigate to="*" />;
+  }
+
 
   return (
     <>
@@ -35,11 +45,14 @@ const Logement = () => {
                 <h3>{logement.location}</h3>
               </div>
 
+
               <div className='tags'>
                 {logement.tags.map((tag, index) => (
-                  <div key={index} className='tag'>{tag}</div>
+                  <Tag key={index} data={tag} />
                 ))}
               </div>
+
+
               <Rating data={logement.rating} />
               <Host data={logement.host}/>
               <Collapse
