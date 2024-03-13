@@ -60,7 +60,7 @@ a {
   text-decoration: none;
   color: $secondary-color;
 
-  &:hover {
+  &:hover, &.active  {
     text-decoration: underline;
   }
 }
